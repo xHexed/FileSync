@@ -1,0 +1,4 @@
+bw-all-config:
+  from: "E:/Bedwars/plugins/FileSync/bw-all-config/config.cm2"
+  to:
+  - "E:/bw-arenas/solo1/plugins/MBedwars/config.cm2"

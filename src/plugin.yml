@@ -1,0 +1,8 @@
+version: "1.0"
+name: FileSync
+author: xHexed
+main: com.grassminevn.filesync.FileSync
+description: FileSync
+commands:
+  sync:
+    description: Sync files
