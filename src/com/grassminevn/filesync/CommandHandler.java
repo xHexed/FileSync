@@ -11,11 +11,15 @@ public class CommandHandler implements CommandExecutor {
         switch (args[0].toLowerCase()) {
             case "reload":
                 FileSync.reloadSettings();
-                sender.sendMessage("Reload xong");
+                sender.sendMessage("Reload done");
                 return true;
             case "sync":
                 if (args.length < 2) return false;
-                Util.sync(FileSync.getInstance().getConfig().getConfigurationSection(args[1]));
+                if (FileSync.getInstance().getConfig().contains(args[1]))
+                    Util.sync(FileSync.getInstance().getConfig().getConfigurationSection(args[1]));
+                else {
+                    sender.sendMessage("Cannot sync files");
+                }
                 return true;
             default:
                 return true;
